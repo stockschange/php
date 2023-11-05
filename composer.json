@@ -2,7 +2,17 @@
   "name": "stockschange/stockschange",
   "type": "library",
   "description": "API Library for Real-Time American Stocks, News and Currencies",
-  "keywords": ["php","real-time stock","real-time","real time","nasdaq100","sp500","dowjones","currency","company news"],
+  "keywords": [
+    "php",
+    "real-time stock",
+    "real-time",
+    "real time",
+    "nasdaq100",
+    "sp500",
+    "dowjones",
+    "currency",
+    "company news"
+  ],
   "homepage": "https://github.com/stockschange/php",
   "license": "MIT",
   "authors": [
@@ -21,7 +31,7 @@
     "ext-pdo": "*",
     "ext-json": "*",
     "guzzlehttp/guzzle": "^7.0",
-    "cboden/ratchet": "v0.5.x-dev",
+    "cboden/ratchet": "dev-master",
     "react/event-loop": "^1.1"
   },
   "autoload": {
