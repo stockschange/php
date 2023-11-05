@@ -26,7 +26,7 @@
   },
   "autoload": {
     "psr-4": {
-      "StocksChange\\StocksChange": "src/"
+      "StocksChange\\StocksChange\\": "src/"
     }
   },
   "autoload-dev": {
