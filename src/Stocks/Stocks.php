@@ -2,6 +2,7 @@
 
 namespace StocksChange;
 
+use Exception;
 use GuzzleHttp\Client;
 
 class StockMarket
@@ -11,13 +12,15 @@ class StockMarket
     private string $apiKeyCurrency;
     private string $baseUrl;
     private $apiKey;
+    private HttpClient $httpClient;
 
-    public function __construct(array $config)
+    public function __construct(array $config, $httpClient)
     {
         $this->apiKeyStocks = $config['api_keys']['stocks'];
         $this->apiKeyNews = $config['api_keys']['news'];
         $this->apiKeyCurrency = $config['api_keys']['currency'];
         $this->baseUrl = 'https://api.stockschange.com';
+        $this->httpClient = $httpClient;
     }
 
     public function httpClient(string $method, string $endpoint, array $data = [])
