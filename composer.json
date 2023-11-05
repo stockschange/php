@@ -1,0 +1,29 @@
+{
+  "name": "stockschange/stockschange",
+  "type": "library",
+  "description": "My API Library for American Stocks and Currencies",
+  "keywords": ["php","real-time stock","real-time","real time","nasdaq100","sp500","dowjones","currency","company news"],
+  "homepage": "https://github.com/stockschange/php",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "StocksChange LLC.",
+      "email": "hello@stockschange.com",
+      "homepage": "https://stockschange.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "ext-pdo": "*",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^7.0",
+    "cboden/ratchet": "^0.5",
+    "react/event-loop": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "StocksChange\\": "src/"
+    }
+  },
+  "minimum-stability": "dev"
+}
