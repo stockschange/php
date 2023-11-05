@@ -21,7 +21,7 @@
     "ext-pdo": "*",
     "ext-json": "*",
     "guzzlehttp/guzzle": "^7.0",
-    "cboden/ratchet": "^0.5@dev",
+    "cboden/ratchet": "v0.5.x-dev",
     "react/event-loop": "^1.1"
   },
   "autoload": {
