@@ -3,26 +3,21 @@
 namespace StocksChange;
 
 use GuzzleHttp\Client;
-use Ratchet\Client\Connector;
-use Ratchet\RFC6455\Messaging\Message;
-use React\EventLoop\Factory;
 
 class StockMarket
 {
     private string $apiKeyStocks;
     private string $apiKeyNews;
     private string $apiKeyCurrency;
-    private Client $httpClient;
     private string $baseUrl;
     private $apiKey;
 
-    public function __construct(array $config, HttpClient $httpClient)
+    public function __construct(array $config)
     {
         $this->apiKeyStocks = $config['api_keys']['stocks'];
         $this->apiKeyNews = $config['api_keys']['news'];
         $this->apiKeyCurrency = $config['api_keys']['currency'];
         $this->baseUrl = 'https://api.stockschange.com';
-        $this->httpClient = new Client();
     }
 
     public function httpClient(string $method, string $endpoint, array $data = [])
@@ -72,20 +67,6 @@ class StockMarket
             'offset' => $offset,
         ];
         return $this->makeApiRequest($endpoint, $queryParams);
-    }
-
-    public function establishWebSocketConnection(string $webSocketUrl, callable $onMessage)
-    {
-        $loop = Factory::create();
-
-        $connector = new Connector($loop);
-        $connector($webSocketUrl)->then(function ($conn) use ($onMessage) {
-            $conn->on('message', function (Message $message) use ($onMessage) {
-                $onMessage($message->getPayload());
-            });
-        });
-
-        $loop->run();
     }
 
     private function makeApiRequest(string $endpoint, array $queryParams)
