@@ -31,8 +31,7 @@
   "require": {
     "php": ">=7.0",
     "ext-pdo": "*",
-    "ext-json": "*",
-    "guzzlehttp/guzzle": "^7.0"
+    "ext-json": "*"
   },
   "autoload": {
     "psr-4": {
