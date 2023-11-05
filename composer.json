@@ -1,5 +1,5 @@
 {
-  "name": "stockschange/php-client",
+  "name": "stockschange/provider",
   "type": "library",
   "description": "API Library for Real-Time American Stocks, News and Currencies",
   "keywords": [
