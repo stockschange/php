@@ -30,9 +30,7 @@
     "php": ">=7.0",
     "ext-pdo": "*",
     "ext-json": "*",
-    "guzzlehttp/guzzle": "^7.0",
-    "cboden/ratchet": "dev-master",
-    "react/event-loop": "^1.1"
+    "guzzlehttp/guzzle": "^7.0"
   },
   "autoload": {
     "psr-4": {
